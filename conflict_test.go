@@ -34,6 +34,7 @@ func TestConflicts(t *testing.T) {
 	}
 }
 
+// add comments
 func TestValid(t *testing.T) {
 	good := Section{Weekday: 3, Start: 1, End: 2, Weeks: EvenWeeks}
 	if !good.Valid() {
