@@ -52,3 +52,15 @@ func TestValid(t *testing.T) {
 		}
 	}
 }
+
+func TestValidSunday(t *testing.T) {
+	s := Section{
+		Weekday: 7,
+		Start:   1,
+		End:     2,
+		Weeks:   AllWeeks,
+	}
+	if !s.Valid() {
+		t.Fatal("星期日的合法上课时段应通过校验")
+	}
+}
